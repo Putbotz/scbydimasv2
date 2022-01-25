@@ -5,14 +5,14 @@ let totalreg = Object.keys(global.DATABASE._data.users).length
 let handler = async function (m, { text, usedPrefix }) {
   let user = global.DATABASE.data.users[m.sender]
   if (user.registered === true) throw `Anda sudah terdaftar\nDaftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
-  if (!Reg.test(text)) throw `Format salah\n*${usedPrefix}daftar nama|umur*\nContoh : ${usedPrefix}daftar Dimas|20`
+  if (!Reg.test(text)) throw `Format salah\n*${usedPrefix}daftar nama|umur*\nContoh : ${usedPrefix}daftar Put|20`
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   let [_, name, splitter, age] = text.match(Reg)
   if (!name) throw 'Nama tidak boleh kosong (Alphanumeric)'
   if (!age) throw 'Umur tidak boleh kosong (Angka)'
   age = parseInt(age)
-  if (age > 120) throw 'Maxsimal 120'
-  if (age < 5) throw 'Minimal 5 Tahun'
+  if (age > 120) throw 'loh mending tidur aja'
+  if (age < 5) throw 'Bocil ga bisa yh wkwk :v'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
