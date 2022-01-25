@@ -11,7 +11,7 @@ let name = m.fromMe ? conn.user : conn.contacts[m.sender]
 ]
 const buttonMessage = {
     contentText: `\n*😴Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu sekitar* _${timers}_ *Untuk bisa melanjutkan Menebang*\n`,
-    footerText: '©bydimas', 
+    footerText: '©Putbotz', 
     buttons: buttons,
     headerType: 1
 }
@@ -151,7 +151,9 @@ hsl = `
 
 
 Menebang pohon selesai ....
- 
+ 
+
+
  ➕ 💸 Uang = [ ${zero4} ]
  ➕ 💠 Exp = [ ${zero5} ] 		 
  ➕ 🐒 Monyet = +4
@@ -163,7 +165,8 @@ Menebang pohon selesai ....
 
 _©BY DIMAS_
 `
-
+
+
 global.DATABASE.data.users[m.sender].money += rbrb4
 global.DATABASE.data.users[m.sender].exp += rbrb5
 global.DATABASE.data.users[m.sender].monyet += 4
